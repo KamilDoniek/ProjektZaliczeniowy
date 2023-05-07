@@ -125,6 +125,7 @@ $lightGrey:#f9f9f9;
         background-color:#f9f9f9 ;
         padding: 0;
         margin: 0;
+        height: 100vh;
         div{
             display: flex;
             flex-direction: row-reverse;
@@ -257,6 +258,67 @@ $lightGrey:#f9f9f9;
         }
 
       }
+      @media  (min-width: 1025px){
+      main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-image: url("/images/background/main.jpg");
+        height: 75vh;
+        padding: 0;
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: 30px;
+                height: 30px;
+                padding: 20px;
+            }
+        }
+      }
+      .menu_box{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 30px;
+        li{
+            list-style: none;
+            margin-left: 10px;
+            a{
+                color: #171717;
+            }
+            a:hover{
+                color: #10c9c3;
+            }
+
+        }
+      }
+      header{
+        display: flex;
+        flex-direction: column;      
+        width: 40%;
+        margin-bottom: 20vh;
+        h2{
+            padding-bottom: 20px;
+            width: 100%;
+            font-size:40px;
+        }
+        article{
+            padding-bottom: 20px;
+            width:100%;
+
+        }
+        button{
+            width: 170px;
+            height: 45px;
+            background: $lightBlue;
+            color: white;
+        }
+      }
+    }
       .productSection{
         display: flex;
         flex-wrap: wrap;
@@ -376,7 +438,6 @@ $lightGrey:#f9f9f9;
         justify-content: center;
         align-items: center;
         padding:  30px;
-        margin: 10px;
         }
     form{
         margin-top: 50px;
@@ -413,3 +474,28 @@ $lightGrey:#f9f9f9;
     }
     
     
+    footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: grey;
+        background-color:black;
+        div{
+            width: 180px;
+        }
+    }
+    .informations{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        ul li {
+            text-decoration: none;
+            list-style:none;
+            padding: 2px;
+        }
+        ul li a{
+            color: grey;
+        }
+    }
+

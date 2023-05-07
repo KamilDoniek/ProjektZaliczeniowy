@@ -110,6 +110,7 @@ main {
     background-color: #f9f9f9;
     padding: 0;
     margin: 0;
+    height: 100vh;
   }
   main div {
     display: flex;
@@ -247,6 +248,66 @@ main {
   color: white;
 }
 
+@media (min-width: 1025px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: url("/images/background/main.jpg");
+    height: 75vh;
+    padding: 0;
+  }
+  main div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main div img {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+  }
+  .menu_box {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
+  .menu_box li {
+    list-style: none;
+    margin-left: 10px;
+  }
+  .menu_box li a {
+    color: #171717;
+  }
+  .menu_box li a:hover {
+    color: #10c9c3;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-bottom: 20vh;
+  }
+  header h2 {
+    padding-bottom: 20px;
+    width: 100%;
+    font-size: 40px;
+  }
+  header article {
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  header button {
+    width: 170px;
+    height: 45px;
+    background: #10c9c3;
+    color: white;
+  }
+}
+
 .productSection {
   display: flex;
   flex-wrap: wrap;
@@ -377,7 +438,6 @@ main {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  margin: 10px;
 }
 
 form {
@@ -415,4 +475,33 @@ form input[type=submit] {
 .formName, .formMail {
   width: 50%;
   margin-bottom: 5px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: grey;
+  background-color: black;
+}
+
+footer div {
+  width: 180px;
+}
+
+.informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.informations ul li {
+  text-decoration: none;
+  list-style: none;
+  padding: 2px;
+}
+
+.informations ul li a {
+  color: grey;
 }

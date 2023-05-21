@@ -7,10 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="script/script.js" defer="'defer" defer="'defer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body >
     
-<div class="container">
+<div class="container" id="home">
 
 <main>
     <div>   
@@ -25,14 +28,13 @@
         </button>
 
         <ul class="menu_box">
-            <li class="menu_item"><a  href="#">home</a></li>
-            <li class="menu_item"><a  href="#">about</a></li>
-            <li class="menu_item"><a  href="#">about</a></li>
-            <li class="menu_item"><a  href="#">work</a</li>
-            <li class="menu_item"><a  href="#">process</a</li>
-            <li class="menu_item"><a  href="#">ervices</a</li>
-            <li class="menu_item"><a  href="#">testimonials</a</li>
-            <li class="menu_item"><a  href="#">contact</a></li>
+            <li class="menu_item"><a  href="#home">home</a></li>
+            <li class="menu_item"><a  href="#about">about</a></li>
+            <li class="menu_item"><a  href="#work">work</a</li>
+            <li class="menu_item"><a  href="#process">process</a</li>
+            <li class="menu_item"><a  href="#services">services</a</li>
+            <li class="menu_item"><a  href="#testimonials">testimonials</a</li>
+            <li class="menu_item"><a  href="#contact">contact</a></li>
         </ul>
 
     </nav>
@@ -43,11 +45,12 @@
             20 years of combined experience, and know a thing or two
             about designing websites and mobile apps.
         </article>
-        <button>CONTACT US</button>
+        <button><a href="#contact">CONTACT US</a></button>
+        
     </header>
 </main>
 
-    <section class="aboutUs">
+    <section id="about"class="aboutUs">
         <h2>About Us</h2>
         <article>Divide have don't man wherein air fourth. Own itself make have night won't make
             A you under Speed appear which good give. Own give air without fowl moveth dry first
@@ -56,7 +59,7 @@
         <img src="images/about us/autograf.png" alt="autograf">
     </section>
 
-   <section class="ProSkills">
+   <section id="work" class="ProSkills">
    
 
     <div class="ProSkills_inner">
@@ -66,27 +69,27 @@
     <div class="skill_inner">
         <p>UI/UX DESIGN 75%</p>
         <span class="skill">
-            <span class="skill_inner_line"></span>
+            <span  class="firstSkill"></span>
         </span>
     </div>
     <div class="skill_inner">
         <p>WEB DEVELOPMENT 90%</p>
         <span class="skill">
-            <span class="skill_inner_line"></span>
+            <span class="secondSkill" ></span>
         </span>
     </div>
      <div class="skill_inner">
         <p>MARKETING 65%</p>
         <span class="skill">
-            <span class="skill_inner_line"></span>
+            <span class="thirdSkill" ></span>
         </span>
     </div>
     </div>
-    <div>
+    <div class="ProSkillsImg">
         <img src="/images/background/skills .png" alt="">
     </div>
    </section> 
-   <section class="Information_skills">
+   <section id="process" class="Information_skills">
         <div>
             <img src="/images/information icon/bag icon.png" alt="">
             <div>
@@ -123,40 +126,54 @@
    <section>
     <div class="productSection">
         <div>
-            <img src="/images/product icon/card icon.png" alt="">
+            <img class="products" src="/images/product icon/card icon.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
         <div>
-            <img src="/images/product icon/mobile icon.png" alt="">
+            <img class="products" src="/images/product icon/mobile icon.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
         <div>
-            <img src="/images/product icon/bag icon.png" alt="">
+            <img class="products" src="/images/product icon/bag icon.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
         <div>
-            <img src="/images/product icon/book icon.png" alt="">
+            <img class="products" src="/images/product icon/book icon.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
         <div class="productBootle">
-            <img src="/images/product icon/bootle icon.png" alt="">
+            <img class="products"src="/images/product icon/bootle icon.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
         <div>
-            <img src="/images/product icon/bag icon.png" alt="">
+            <img class="products" src="/images/product icon/bag icon.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
         <div>
-            <img src="/images/product icon/honey icno.png" alt="">
+            <img class="products" src="/images/product icon/honey icno.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
         <div class="productBootle">
-            <img src="/images/product icon/balm icon.png" alt="">
+            <img class="products" src="/images/product icon/balm icon.png" alt="">
+            <img class="eyeHover" src="/images/background/eye.png" alt="">
         </div>
     </div>
     <p class="productText">load more work</p>
    </section>
-   <section class="workSection">
+   <section id="process" class="workSection">
         <h2>Our work Process</h2>
         <p>Was years it seasons was there form he in in them together over that,
             third sixth gathered female creeping bearing behold years
         </p>
-        <img src="/images/background/wideo.png" alt="film">
+        <video  controls autoplay preload: auto>
+            <source src="/video/film.mp4" type="video/mp4">
+            <source src="/video/film.ogg" type="video/ogg">
+
+        </video>
+        
+     
    </section>
-   <section class="skillSection">
+   <section id="services" class="skillSection">
     <div>
         <img src="/images/skills icon/design Icon.png" alt="">
         <h4>UI/UX DESIGN</h4>  
@@ -222,7 +239,7 @@
         </p>
     </div>
    </section>
-   <section class="quteSection">
+   <section id="testimonials" class="quteSection">
         <p class="qute">
             Outstanding job and exceeded all exctations.It was a pleasure to work with them
             on a sizable first project and am looking forward to start the next one asap.
@@ -260,7 +277,7 @@
         </div>
 
    </section>
-   <footer>
+   <footer id="contact">
         <div>
             <h5>Piroll Design, Inc.</h5>
             <p>&copy 2017 Piroll.All rights reserved.

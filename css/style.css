@@ -6,6 +6,7 @@
   vertical-align: baseline;
   text-decoration: none;
   outline: 0;
+  font-family: roboto;
 }
 
 body {
@@ -17,6 +18,7 @@ main {
   padding: 5px;
   background-image: url("/images/background/main.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .containet {
@@ -45,7 +47,7 @@ main {
     background-color: #FFFFFF;
     position: absolute;
     background-color: #10c9c3;
-    left: 0;
+    left: 30px;
     top: 50%;
     transform: translateY(-50%);
     transition: background-color .3s .1s ease-in-out;
@@ -83,28 +85,31 @@ main {
   }
   .menu_box {
     background-color: #FFFFFF;
-    height: 100%;
-    width: 70px;
+    padding: 10px;
+    width: 80px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -30px;
     transform: translateX(-70px);
+    list-style: none;
+    height: 40%;
+    z-index: 100;
   }
   .menu_box--active {
-    transform: translateX(0px);
-  }
-  .menu_box {
-    list-style: none;
-    height: 30%;
+    transform: translateX(30px);
   }
   .menu_item {
     margin-bottom: 20px;
     padding-left: 5px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .menu_item a {
     text-decoration: none;
     color: #171717;
+    text-transform: uppercase;
+  }
+  .menu_item:hover a {
+    color: #10c9c3;
   }
   main {
     background-color: #f9f9f9;
@@ -125,26 +130,31 @@ main {
   header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
+    position: relative;
+    width: 50%;
+    top: 100px;
+    left: -80px;
+    float: right;
+    z-index: 0;
   }
   header h2 {
-    margin: 20px;
+    font-size: 38px;
+    margin-bottom: 40px;
   }
   header article {
-    width: 50%;
-    padding: 10px;
+    width: 100%;
     color: gray;
-    margin: 20px;
+    font-size: 19px;
+    margin-bottom: 30px;
   }
   header button {
     background-color: #10c9c3;
     width: 150px;
     height: 45px;
+  }
+  header button a {
+    text-decoration: none;
     color: white;
-    margin: 20px;
-    margin-bottom: 50px;
   }
 }
 
@@ -153,7 +163,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 50vh;
 }
 
 .aboutUs h2 {
@@ -169,6 +179,7 @@ main {
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 .ProSkills div {
@@ -202,16 +213,25 @@ main {
   margin-top: 10px;
 }
 
-.skill_inner_line {
-  width: 70%;
+.firstSkill {
+  width: 75%;
   height: 3px;
   position: absolute;
   background-color: #10c9c3;
 }
 
-.skill_inner--scroll {
-  width: 80%;
-  transition: transform  .3s .1s ease-in-out;
+.secondSkill {
+  width: 90%;
+  height: 3px;
+  position: absolute;
+  background-color: #10c9c3;
+}
+
+.thirdSkill {
+  width: 65%;
+  height: 3px;
+  position: absolute;
+  background-color: #10c9c3;
 }
 
 .Information_skills {
@@ -228,13 +248,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 15px;
-  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .Information_skills div img {
-  width: 30px;
-  height: 40px;
+  width: 40px;
+  height: 35px;
 }
 
 .Information_skills div div {
@@ -252,18 +272,19 @@ main {
   main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-end;
     background-image: url("/images/background/main.jpg");
-    height: 75vh;
+    height: 100vh;
     padding: 0;
   }
   main div {
     width: 100%;
     display: flex;
+    position: fixed;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    z-index: 100;
   }
   main div img {
     width: 30px;
@@ -274,6 +295,9 @@ main {
     display: flex;
     justify-content: space-between;
     margin-right: 30px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px 35px;
   }
   .menu_box li {
     list-style: none;
@@ -281,6 +305,7 @@ main {
   }
   .menu_box li a {
     color: #171717;
+    text-transform: uppercase;
   }
   .menu_box li a:hover {
     color: #10c9c3;
@@ -289,21 +314,29 @@ main {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin-bottom: 20vh;
+    position: relative;
+    top: 300px;
+    left: -50px;
   }
   header h2 {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     width: 100%;
-    font-size: 40px;
+    font-size: 44px;
   }
   header article {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     width: 100%;
+    font-size: 20px;
   }
   header button {
-    width: 170px;
-    height: 45px;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 17px;
     background: #10c9c3;
+  }
+  header button a {
+    text-decoration: none;
     color: white;
   }
 }
@@ -315,15 +348,16 @@ main {
 }
 
 .productSection div {
-  width: 23%;
-  min-width: 100px;
+  width: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.productSection div img {
-  width: 100px;
+.productSection div:hover .eyeHover {
+  z-index: 1;
+  opacity: 90%;
 }
 
 .productSection div:nth-child(odd) {
@@ -334,9 +368,26 @@ main {
   background-color: #f9f9f9;
 }
 
-.productBootle img {
-  height: 110px;
-  width: 50px;
+.products {
+  transform: scale(0.7);
+}
+
+.eyeHover {
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 300px;
+}
+
+@media (max-width: 400px) {
+  .eyeHover {
+    width: 300px;
+    height: 200px;
+  }
+  .productSection div {
+    width: 300px;
+    height: 200px;
+  }
 }
 
 .productText {
@@ -358,7 +409,7 @@ main {
   padding-top: 50px;
 }
 
-.workSection img {
+.workSection video {
   width: 90%;
   padding: 20px;
 }
@@ -377,6 +428,7 @@ main {
   background-color: #F5F1F0;
   padding-bottom: 50px;
   padding-top: 50px;
+  height: 70%;
 }
 
 .skillSection div {
@@ -402,7 +454,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 40px;
+  height: 50vh;
 }
 
 .quteSection p {
@@ -411,13 +465,13 @@ main {
 }
 
 .quteAuthor {
-  font-size: small;
+  font-size: large;
 }
 
 .qute {
   text-align: center;
-  font-weight: bold;
-  font-size: larger;
+  font-weight: 800;
+  font-size: 26px;
 }
 
 .companySlider {
@@ -428,7 +482,7 @@ main {
 }
 
 .companySlider img {
-  padding: 10px;
+  padding: 5px;
 }
 
 .formSection {
@@ -438,6 +492,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 30px;
+  height: 60vh;
 }
 
 form {
@@ -484,10 +539,13 @@ footer {
   justify-content: space-between;
   color: grey;
   background-color: black;
+  padding: 30px;
 }
 
 footer div {
-  width: 180px;
+  width: 200px;
+  font-size: 17px;
+  padding: 10px;
 }
 
 .informations {
@@ -504,4 +562,18 @@ footer div {
 
 .informations ul li a {
   color: grey;
+}
+
+@media (max-width: 500px) {
+  main {
+    background-color: #f9f9f9;
+    background-image: none;
+  }
+  .ProSkillsImg {
+    display: none;
+  }
+  .ProSkills_inner {
+    flex-grow: 1;
+    width: 100%;
+  }
 }

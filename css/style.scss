@@ -6,7 +6,7 @@
     vertical-align: baseline;
     text-decoration: none;
     outline: 0;
-    
+    font-family: roboto;
 }
 body{
     max-width: 100%;
@@ -15,7 +15,8 @@ body{
     width: 100%;
    padding: 5px;
    background-image: url("/images/background/main.jpg");
-   background-size: cover;
+   background-size:cover;
+   background-repeat: no-repeat;
 }
 
 .containet{
@@ -25,7 +26,9 @@ $dark: #171717;
 $light: #FFFFFF;
 $lightBlue:   #10c9c3;
 $lightGrey:#f9f9f9;
-    @media  (max-width: 1024px){
+
+    @media  (max-width: 1024px)
+{
     
     .hamburger{
         padding-top: 20px;
@@ -35,12 +38,14 @@ $lightGrey:#f9f9f9;
         background-color: transparent;
         border: 0;
         margin: 0;
+        
     }
     .hamburger_box{
         width: 25px;
         height: 20px;
         display: inline-block;
         position: relative;
+        
     }
     @mixin hamburger-line {
         width: 100%;
@@ -53,14 +58,13 @@ $lightGrey:#f9f9f9;
     }
     .hamburger_inner{
        @include hamburger-line;
-        left: 0;
+        left: 30px;
         top:50%;
         transform: translateY(-50%);
         transition: background-color .3s .1s ease-in-out;
     }
     .hamburger_inner::before,.hamburger_inner::after{
         @include hamburger-line;
-
         content: ' ';
         left: 0;
         transition: transform  .3s .1s ease-in-out;
@@ -94,31 +98,38 @@ $lightGrey:#f9f9f9;
    
     .menu_box{
         background-color: $light;
-        height: 100%;
-        width: 70px;
+        padding: 10px;
+        width: 80px;
         position: absolute;
         top: 0;
-        left: 0;
+        left: -30px;
         transform: translateX(-70px);
-
+        list-style: none;
+        height: 40%;
+        z-index: 100;
       }
       .menu_box--active{
-        transform: translateX(0px);
+        transform: translateX(30px);
       }
-      .menu_box  {
-        list-style: none;
-        height: 30%;
-      }
+      
       .menu_item{
         margin-bottom: 20px;
         padding-left: 5px;
-        font-size: 14px;
+        font-size: 12px;
 
         a{
             text-decoration: none;
             color: $dark;
+            text-transform: uppercase;
+
         }
     
+      }
+      .menu_item:hover{
+        a{
+            color: #10c9c3;
+        }
+       
       }
 
       main{
@@ -126,6 +137,7 @@ $lightGrey:#f9f9f9;
         padding: 0;
         margin: 0;
         height: 100vh;
+        
         div{
             display: flex;
             flex-direction: row-reverse;
@@ -137,40 +149,46 @@ $lightGrey:#f9f9f9;
             }
         }
       }
+            
       header{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        width: 100%;
+        flex-direction: column;  
+        position: relative;
+        width: 50%;
+        top: 100px;
+        left: -80px;
+       float:right;
+      z-index: 0;
         h2{
-            margin: 20px;
+            font-size: 38px;
+            margin-bottom: 40px;
         }
         article{
             
-            width: 50%;
-            padding: 10px;
+            width: 100%;
             color: gray;
-            margin: 20px;
+            font-size: 19px;
+            margin-bottom: 30px;
 
         }
         button{
             background-color: #10c9c3;
             width: 150px;
             height: 45px;
-            color: white;
-            margin: 20px;
-            margin-bottom: 50px;
+            a{
+                text-decoration: none;
+                color: white;
+            }
         }
       }
-      
-      }
+  
+}
       .aboutUs{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        height: 50vh;
 
         h2{
             margin-top: 20px;
@@ -181,11 +199,10 @@ $lightGrey:#f9f9f9;
         }
       }
       .ProSkills{
-        
         display: flex;
         flex-direction: row;
         width: 100%;
-        
+        padding-bottom: 20px;
         div{
             width: 50%;
         }
@@ -216,35 +233,42 @@ $lightGrey:#f9f9f9;
         
 
       }
-      .skill_inner_line{
-        width: 70%;
+      @mixin Skilladd{
         height: 3px;
         position: absolute;
         background-color: #10c9c3;
       }
-      .skill_inner--scroll{
-        width: 80%;
-        transition: transform  .3s .1s ease-in-out;
-
+      .firstSkill{
+        width: 75%;
+       @include Skilladd();
       }
+      .secondSkill{
+        width: 90%;
+        @include Skilladd();
+    
+      }
+      .thirdSkill{
+        width: 65%;
+        @include Skilladd();
+      }
+     
       .Information_skills{
         display: flex;
         justify-content: center;
         align-items: center;
         background-color:#10c9c3 ;
         flex-wrap: wrap;
-        
         div{
             margin-top: 30px;
             margin-bottom: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 15px;
-            margin-right: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
             img{
-                width: 30px;
-                height: 40px;
+                width: 40px;
+                height: 35px;
             }
             div{
                 display: flex;
@@ -259,20 +283,23 @@ $lightGrey:#f9f9f9;
 
       }
       @media  (min-width: 1025px){
+        
+       
       main{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: flex-end;
         background-image: url("/images/background/main.jpg");
-        height: 75vh;
+        height: 100vh;
         padding: 0;
         div{
             width: 100%;
             display: flex;
+            position: fixed;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            z-index: 100;
             img{
                 width: 30px;
                 height: 30px;
@@ -284,11 +311,16 @@ $lightGrey:#f9f9f9;
         display: flex;
         justify-content: space-between;
         margin-right: 30px;
+        background-color: white;
+        border-radius: 30px;
+        padding: 15px 35px;
+
         li{
             list-style: none;
             margin-left: 10px;
             a{
                 color: #171717;
+                text-transform: uppercase;
             }
             a:hover{
                 color: #10c9c3;
@@ -300,22 +332,31 @@ $lightGrey:#f9f9f9;
         display: flex;
         flex-direction: column;      
         width: 40%;
-        margin-bottom: 20vh;
+        position: relative;
+        top: 300px;
+        left: -50px;
+
         h2{
-            padding-bottom: 20px;
+            padding-bottom: 40px;
             width: 100%;
-            font-size:40px;
+            font-size:44px;
         }
         article{
-            padding-bottom: 20px;
+            padding-bottom: 30px;
             width:100%;
-
+            font-size: 20px;
         }
         button{
-            width: 170px;
-            height: 45px;
+            margin-top: 20px;
+            width: 200px;
+            height: 50px;
+            font-size: 17px;
             background: $lightBlue;
-            color: white;
+       
+            a{
+                text-decoration: none;
+                color: white;
+            }
         }
       }
     }
@@ -324,16 +365,21 @@ $lightGrey:#f9f9f9;
         flex-wrap: wrap;
         justify-content: center;
         div{
-            width: 23%;
-            min-width: 100px;
+            width: 400px;
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
-
-            img{
-                width: 100px;
+        }
+        div:hover{
+         .eyeHover{
+            z-index: 1;
+            opacity: 90%;
             }
         }
+        
+        
+       
         div:nth-child(odd){
             background-color: #F5F1F0;
           }
@@ -342,13 +388,31 @@ $lightGrey:#f9f9f9;
           }
     
       }
-      .productBootle{
-        img{
-            height: 110px;
-            width: 50px;
 
+      .products{
+        transform: scale(0.7);
+    }
+    
+    .eyeHover{
+        position: absolute;
+        z-index: -1;
+        width: 400px;
+        height: 300px;
+    }
+  @media (max-width:400px) {
+    
+    .eyeHover{
+        width: 300px;
+        height: 200px;
+    }
+    .productSection{
+        div{
+            width: 300px;
+            height: 200px;
         }
     }
+  }
+   
     .productText{
         background-color: $lightGrey;
             width: 100%;
@@ -365,7 +429,7 @@ $lightGrey:#f9f9f9;
         align-items: center;
         padding: 30px;
         padding-top: 50px;
-        img{
+        video{
             width: 90%;
             padding: 20px;
 
@@ -385,6 +449,7 @@ $lightGrey:#f9f9f9;
         background-color:#F5F1F0 ;
         padding-bottom: 50px;
         padding-top: 50px;
+        height: 70%;
         div{
             width: 23%;
             min-width: 200px;
@@ -407,28 +472,30 @@ $lightGrey:#f9f9f9;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         padding: 40px;
-        
+        height: 50vh;
         p{
             padding: 20px;
             color: white;
         }
     }
     .quteAuthor{
-        font-size: small;
+        font-size: large;
     }
     .qute{
         text-align: center;
-        font-weight: bold;
-        font-size: larger;
+        font-weight: 800;
+        font-size: 26px;
     }
     .companySlider{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 30px;
+        
         img{
-            padding: 10px;
+            padding: 5px;
         }
     }
     .formSection{
@@ -438,6 +505,7 @@ $lightGrey:#f9f9f9;
         justify-content: center;
         align-items: center;
         padding:  30px;
+        height: 60vh;
         }
     form{
         margin-top: 50px;
@@ -481,8 +549,12 @@ $lightGrey:#f9f9f9;
         justify-content: space-between;
         color: grey;
         background-color:black;
+        padding: 30px;
+
         div{
-            width: 180px;
+            width: 200px;
+            font-size: 17px;
+            padding: 10px;
         }
     }
     .informations{
@@ -499,3 +571,18 @@ $lightGrey:#f9f9f9;
         }
     }
 
+@media  (max-width:500px) {
+    main{
+        background-color:$lightGrey;
+        background-image: none;
+    }
+    .ProSkillsImg{
+        display: none;
+    }
+    
+    .ProSkills_inner{
+    flex-grow: 1;
+    width: 100%;
+    }
+    
+}

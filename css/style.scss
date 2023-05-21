@@ -19,9 +19,6 @@ body{
    background-repeat: no-repeat;
 }
 
-.containet{
-    width: 100%;
-}
 $dark: #171717;
 $light: #FFFFFF;
 $lightBlue:   #10c9c3;
@@ -75,7 +72,7 @@ $lightGrey:#f9f9f9;
 
     }
     .hamburger--active{
-        transform: translateX(60px);
+        transform: translateX(70px);
     }
     .hamburger_inner::after{
         top: 10px;
@@ -99,7 +96,7 @@ $lightGrey:#f9f9f9;
     .menu_box{
         background-color: $light;
         padding: 10px;
-        width: 80px;
+        width: 90px;
         position: absolute;
         top: 0;
         left: -30px;
@@ -107,15 +104,16 @@ $lightGrey:#f9f9f9;
         list-style: none;
         height: 40%;
         z-index: 100;
+
       }
       .menu_box--active{
         transform: translateX(30px);
       }
       
       .menu_item{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         padding-left: 5px;
-        font-size: 12px;
+        font-size: 13px;
 
         a{
             text-decoration: none;

@@ -1,8 +1,9 @@
 ## HTML CSS PROJECT
-=============
+
 Project for laboratories "Introduction to web technologies" 
 
 ### Features
+
 HTML 5
 SCSS
 Websites is responsive

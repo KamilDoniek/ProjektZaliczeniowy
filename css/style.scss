@@ -7,26 +7,22 @@
     text-decoration: none;
     outline: 0;
     font-family: roboto;
-}
-body{
-    max-width: 100%;
-}
+    }
+$dark: #171717;
+$light: #FFFFFF;
+$lightBlue: #10c9c3;
+$lightGrey:#f9f9f9;
+
  main{
     width: 100%;
    padding: 5px;
    background-image: url("/images/background/main.jpg");
    background-size:cover;
    background-repeat: no-repeat;
-}
-
-$dark: #171717;
-$light: #FFFFFF;
-$lightBlue:   #10c9c3;
-$lightGrey:#f9f9f9;
+    }
 
     @media  (max-width: 1024px)
-{
-    
+{ 
     .hamburger{
         padding-top: 20px;
         width: 60px;
@@ -49,7 +45,7 @@ $lightGrey:#f9f9f9;
         height: 3px;
         background-color:$light ;
         position: absolute;
-        background-color: #10c9c3;
+        background-color: $lightBlue;
 
 
     }
@@ -100,11 +96,11 @@ $lightGrey:#f9f9f9;
         position: absolute;
         top: 0;
         left: -30px;
-        transform: translateX(-70px);
+        transform: translateX(-80px);
         list-style: none;
         height: 40%;
         z-index: 100;
-
+        border-radius: 10px;
       }
       .menu_box--active{
         transform: translateX(30px);
@@ -125,7 +121,7 @@ $lightGrey:#f9f9f9;
       }
       .menu_item:hover{
         a{
-            color: #10c9c3;
+            color: $lightBlue;
         }
        
       }
@@ -135,7 +131,6 @@ $lightGrey:#f9f9f9;
         padding: 0;
         margin: 0;
         height: 100vh;
-        
         div{
             display: flex;
             flex-direction: row-reverse;
@@ -146,8 +141,7 @@ $lightGrey:#f9f9f9;
                 padding:  20px;
             }
         }
-      }
-            
+      }     
       header{
         display: flex;
         flex-direction: column;  
@@ -155,8 +149,8 @@ $lightGrey:#f9f9f9;
         width: 50%;
         top: 100px;
         left: -80px;
-       float:right;
-      z-index: 0;
+        float:right;
+        z-index: 0;
         h2{
             font-size: 38px;
             margin-bottom: 40px;
@@ -170,7 +164,7 @@ $lightGrey:#f9f9f9;
 
         }
         button{
-            background-color: #10c9c3;
+            background-color: $lightBlue;
             width: 150px;
             height: 45px;
             a{
@@ -234,7 +228,7 @@ $lightGrey:#f9f9f9;
       @mixin Skilladd{
         height: 3px;
         position: absolute;
-        background-color: #10c9c3;
+        background-color: $lightBlue;
       }
       .firstSkill{
         width: 75%;
@@ -251,10 +245,11 @@ $lightGrey:#f9f9f9;
       }
      
       .Information_skills{
+        min-height: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color:#10c9c3 ;
+        background-color:$lightBlue ;
         flex-wrap: wrap;
         div{
             margin-top: 30px;
@@ -317,11 +312,11 @@ $lightGrey:#f9f9f9;
             list-style: none;
             margin-left: 10px;
             a{
-                color: #171717;
+                color: $dark;
                 text-transform: uppercase;
             }
             a:hover{
-                color: #10c9c3;
+                color: $lightBlue;
             }
 
         }
@@ -379,10 +374,10 @@ $lightGrey:#f9f9f9;
         
        
         div:nth-child(odd){
-            background-color: #F5F1F0;
+            background-color: $lightGrey;
           }
           div:nth-child(even){
-            background-color: $lightGrey;
+            background-color: $light;
           }
     
       }
@@ -397,6 +392,7 @@ $lightGrey:#f9f9f9;
         width: 400px;
         height: 300px;
     }
+
   @media (max-width:400px) {
     
     .eyeHover{
@@ -427,13 +423,14 @@ $lightGrey:#f9f9f9;
         align-items: center;
         padding: 30px;
         padding-top: 50px;
-        video{
-            width: 90%;
+    
+        p{
+            width: 60%;
             padding: 20px;
 
         }
-        p{
-            width: 60%;
+        video{
+            width: 90%;
             padding: 20px;
 
         }
@@ -444,7 +441,7 @@ $lightGrey:#f9f9f9;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        background-color:#F5F1F0 ;
+        background-color:$lightGrey ;
         padding-bottom: 50px;
         padding-top: 50px;
         height: 70%;
@@ -545,10 +542,9 @@ $lightGrey:#f9f9f9;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        color: grey;
-        background-color:black;
+        color: $lightGrey;
+        background-color:$dark;
         padding: 30px;
-
         div{
             width: 200px;
             font-size: 17px;
@@ -565,7 +561,8 @@ $lightGrey:#f9f9f9;
             padding: 2px;
         }
         ul li a{
-            color: grey;
+        color: $lightGrey;
+
         }
     }
 

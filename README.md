@@ -1,6 +1,6 @@
 ## HTML CSS PROJECT
 
-Project for laboratories "Introduction to web technologies" 
+### Project for laboratories "Introduction to web technologies" 
 
 ### Features
 

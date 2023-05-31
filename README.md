@@ -16,7 +16,7 @@ Graphic of a website created by Teacher.
 
 -gh repo clone KamilDoniek/ProjektZaliczeniowy
 
--Open up index.html
+-Open up index.html and local server 
 
 ### Author
 Kamil Doniek 14447.

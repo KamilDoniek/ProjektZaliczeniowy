@@ -11,7 +11,6 @@ const burgerClick = ()=>{
 
 hamburger.addEventListener("click",burgerClick,false);
 
-const skill_inner =document.querySelector('.skill_inner');
-const skill = document.querySelector('.skill');
+
 
 
